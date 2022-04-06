@@ -1,18 +1,21 @@
 import { ArrowDropDown, Notifications, Search } from "@mui/icons-material";
 import React, { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   window.onscroll = () => {
     setIsScrolled(window.scrollY > 50 ? true : false);
     return () => (window.onscroll = null);
   };
-  console.log(isScrolled);
   return (
     <div className={`navbar ${isScrolled && "scrolled"}`}>
       <div className="container">
         <div className="navbar-left">
-          <img src="/images/logo.svg" alt="logo" />
+          <Link to="/">
+            <img src="/images/logo.svg" alt="logo" />
+          </Link>
           <span>Home</span>
           <span>TV Shows</span>
           <span>Movies</span>

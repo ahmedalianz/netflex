@@ -25,6 +25,9 @@
       }
       span {
         margin: 0 1.2rem;
+        @media (min-width: 360px) {
+          display: none;
+        }
       }
     }
     .navbar-right {

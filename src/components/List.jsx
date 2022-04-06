@@ -1,25 +1,21 @@
+import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import ListItem from "./ListItem";
-import { Navigation } from "swiper";
 
-export default function List() {
-  const slides = [
-    "/images/1.webp",
-    "/images/2.webp",
-    "/images/3.webp",
-    "/images/4.webp",
-    "/images/5.webp",
-  ];
-
+export default function List({ title, list }) {
   return (
     <div className="list">
       <div className="list-container">
-        <h2>Continue To Watch</h2>
+        <h2>{title}</h2>
         <div>
           <Swiper
             navigation
-            modules={[Navigation]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
             centeredSlides
             loop
             breakpoints={{
@@ -37,7 +33,7 @@ export default function List() {
               },
             }}
           >
-            {slides.map((slide, i) => (
+            {list.map((slide, i) => (
               <SwiperSlide className="mySlide" key={i}>
                 <ListItem slide={slide} />
               </SwiperSlide>

@@ -1,5 +1,4 @@
 import AllRoutes from "./routes";
-import Footer from "components/Footer";
 import NavBar from "components/Navbar";
 
 export default function Layout() {
@@ -7,7 +6,6 @@ export default function Layout() {
     <>
       <NavBar />
       <AllRoutes />
-      <Footer />
     </>
   );
 }

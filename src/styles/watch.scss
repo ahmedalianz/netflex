@@ -12,11 +12,28 @@
     color: white;
     cursor: pointer;
     z-index: 2;
+    @media (max-width: 480px) {
+      left: 70%;
+    }
   }
-
-  .video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .video-playback {
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      @media (max-width: 480px) {
+        width: 90%;
+        height: 100%;
+      }
+    }
+    @media (max-width: 480px) {
+      transform: rotate(90deg);
+      position: relative;
+      left: -10rem;
+      top: 8rem;
+      width: 100vh;
+    }
   }
 }
