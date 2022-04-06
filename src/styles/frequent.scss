@@ -1,0 +1,95 @@
+.frequent-container {
+  padding: 3rem 3rem;
+  .questions {
+    margin: 1.25em auto;
+    max-width: 815px;
+    width: 60%;
+    margin: 2em auto;
+    .questions-item {
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+      .question {
+        font-weight: 500;
+        padding: 0.8em 2.2em 0.8em 1.2em;
+        margin-bottom: 3px;
+        position: relative;
+        width: 100%;
+        border: 0;
+        background: #303030;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        .plus {
+          transition: all 0.05s ease-in-out;
+          font-size: 2rem;
+          &.rotate {
+            transform: rotate(45deg);
+          }
+        }
+      }
+      .answer {
+        background: #303030;
+        width: 100%;
+        transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+      }
+    }
+  }
+  .title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .subscribe {
+    .title {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .sub-field {
+      display: flex;
+      margin: 1.5rem 0;
+      justify-content: center;
+      .floating-input {
+        position: relative;
+        input {
+          width: 450px;
+          height: 70px;
+          border: none;
+          &:focus-visible {
+            border: none;
+            outline: none;
+          }
+          &:focus {
+            ~ label {
+              top: 0;
+              font-size: 1rem;
+            }
+          }
+        }
+        label {
+          color: #999;
+          font-size: 14px;
+          font-weight: normal;
+          position: absolute;
+          pointer-events: none;
+          left: 5px;
+          top: 20px;
+          font-size: 1.2rem;
+          transition: 0.2s ease all;
+          -moz-transition: 0.2s ease all;
+          -webkit-transition: 0.2s ease all;
+        }
+      }
+
+      button {
+        border: none;
+        color: white;
+        font-size: 2rem;
+        padding: 1rem;
+        background-color: #e00812;
+        &:hover {
+          background-color: #f40612;
+        }
+      }
+    }
+  }
+}

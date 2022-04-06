@@ -23,11 +23,11 @@ export default function Navbar() {
           <span>My List</span>
         </div>
         <div className="navbar-right">
-          <Search htmlColor="white" className="icon" />
-          <Notifications htmlColor="white" className="icon" />
+          <Search className="icon" />
+          <Notifications className="icon" />
           <img src="/images/profile.jpg" alt="profile" />
           <div className="profile">
-            <ArrowDropDown />
+            <ArrowDropDown htmlColor="white" />
             <div className="options">
               <span>Settings</span>
               <span>Logout</span>

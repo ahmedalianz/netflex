@@ -1,13 +1,16 @@
 import { ArrowBackOutlined } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import React from "react";
 
 export default function Watch() {
   return (
     <div className="watch">
-      <div className="back">
-        <ArrowBackOutlined />
-        Home
-      </div>
+      <Link to="/">
+        <div className="back">
+          <ArrowBackOutlined />
+          Home
+        </div>
+      </Link>
       <div className="video-playback">
         <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
           <iframe

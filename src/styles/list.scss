@@ -6,10 +6,7 @@
     overflow-x: clip;
     .swiper-button-next,
     .swiper-button-prev {
-      color: black;
-      background-color: white;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
+      display: none;
     }
   }
   .list {

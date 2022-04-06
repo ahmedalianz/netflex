@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 
 import Featured from "components/Featured";
+import Footer from "components/Footer";
+import Frequent from "components/Frequent";
 import List from "components/List";
+import Section1 from "components/Section1";
+import Section2 from "components/Section2";
+import Section3 from "components/Section3";
 import axios from "axios";
 
 export default function Home() {
@@ -26,10 +31,27 @@ export default function Home() {
       <div className="list-container">
         <List list={popular} title="Popular Movies" />
         <List list={tvShows} title="Popular Tv Shows" />
-        {/* <List />
-        <List />
-        <List /> */}
       </div>
+      <hr />
+      <Section1 />
+      <hr />
+      <Section2
+        image="images/1.jpg"
+        title="Download your shows to watch offline."
+        desc="Save your favorites easily and always have something to watch."
+      />
+      <hr />
+      <Section3 />
+      <hr />
+      <Section2
+        image="images/3.png"
+        title="Create profiles for kids."
+        desc="Send kids on adventures with their favorite characters in a space made just for them—free with your membership."
+      />
+      <hr />
+      <Frequent />
+      <hr />
+      <Footer />
     </div>
   );
 }
