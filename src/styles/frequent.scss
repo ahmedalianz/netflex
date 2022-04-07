@@ -1,5 +1,8 @@
 .frequent-container {
   padding: 3rem 3rem;
+  @media (max-width: 768px) {
+    padding: 3rem 0.1rem;
+  }
   .questions {
     max-width: 815px;
     width: 60%;
@@ -13,11 +16,8 @@
     .questions-item {
       margin-bottom: 8px;
       font-size: 1.8rem;
-      @media (max-width: 540px) {
-        font-size: 1.4rem;
-      }
-      @media (max-width: 375px) {
-        font-size: 1.2rem;
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
       }
       .question {
         font-weight: 500;
@@ -34,6 +34,12 @@
           font-size: 2rem;
           &.rotate {
             transform: rotate(45deg);
+          }
+        }
+        @media (max-width: 768px) {
+          padding: 0.5rem 1.5rem;
+          .plus {
+            font-size: 1.5rem;
           }
         }
       }
