@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <div className="footer-container">
@@ -29,6 +27,14 @@ export default function Footer() {
             <span className="item">Terms of Use</span>
             <span className="item">Contact Us</span>
           </div>
+        </div>
+        <div>
+          <select name="language" id="">
+            <option value="en">English</option>
+            <option value="ar">العربيه</option>
+          </select>
+
+          <div style={{ marginTop: "1 rem" }}>Netflix Egypt</div>
         </div>
       </div>
     </div>

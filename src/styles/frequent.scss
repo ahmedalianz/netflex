@@ -43,6 +43,7 @@
     .title {
       text-align: center;
       font-size: 1.2rem;
+      font-weight: 400;
     }
     .sub-field {
       display: flex;
@@ -52,7 +53,7 @@
         position: relative;
         input {
           width: 450px;
-          height: 70px;
+          height: 60px;
           border: none;
           &:focus-visible {
             border: none;
@@ -83,8 +84,8 @@
       button {
         border: none;
         color: white;
-        font-size: 2rem;
-        padding: 1rem;
+        font-size: 1.5rem;
+        padding: 1rem 1.8rem;
         background-color: #e00812;
         &:hover {
           background-color: #f40612;

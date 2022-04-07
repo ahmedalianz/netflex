@@ -3,7 +3,7 @@
   .footer-box {
     color: #757575;
 
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     .footer-list {
       font-size: 0.9rem;
@@ -17,6 +17,12 @@
           margin: 0.5rem 0;
         }
       }
+    }
+    select {
+      background-color: black;
+      color: #bab9b9;
+      padding: 1rem;
+      font-size: 1rem;
     }
   }
 }
