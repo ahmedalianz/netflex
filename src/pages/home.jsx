@@ -8,8 +8,10 @@ import Section1 from "components/Section1";
 import Section2 from "components/Section2";
 import Section3 from "components/Section3";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   const [tvShows, setTvShows] = useState([]);
   const [popular, setPopular] = useState([]);
   useEffect(() => {
@@ -29,29 +31,28 @@ export default function Home() {
     <div className="home">
       <Featured />
       <div className="list-container">
-        <List list={popular} title="Popular Movies" />
-        <List list={tvShows} title="Popular Tv Shows" />
+        <List list={popular} title={t("Pop_Movies")} />
+        <List list={tvShows} title={t("Pop_Shows")} />
       </div>
       <hr />
       <Section1 />
       <hr />
       <Section2
         image="images/1.jpg"
-        title="Download your shows to watch offline."
-        desc="Save your favorites easily and always have something to watch."
+        title={t("Section2a_title")}
+        desc={t("Section2a_title")}
       />
       <hr />
       <Section3 />
       <hr />
       <Section2
         image="images/3.png"
-        title="Create profiles for kids."
-        desc="Send kids on adventures with their favorite characters in a space made just for them—free with your membership."
+        title={t("Section2b_title")}
+        desc={t("Section2b_desc")}
       />
       <hr />
       <Frequent />
       <hr />
-      <Footer />
     </div>
   );
 }

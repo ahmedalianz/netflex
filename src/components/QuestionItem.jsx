@@ -1,12 +1,15 @@
 import { Add } from "@mui/icons-material";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function QuestionItem({ question }) {
   const [show, setShow] = useState(false);
+  const { t } = useTranslation();
+
   return (
     <div className="questions-item">
       <div className="question" onClick={() => setShow((prev) => !prev)}>
-        <span>{question.question}</span>
+        <span>{t(question.question)}</span>
         <span>
           <Add className={`plus ${show && "rotate"}`} />
         </span>
@@ -23,7 +26,7 @@ export default function QuestionItem({ question }) {
             : { height: "0", overflow: "hidden", padding: "0 2rem" }
         }
       >
-        <span>{question.answer}</span>
+        <span>{t(question.answer)}</span>
       </div>
     </div>
   );

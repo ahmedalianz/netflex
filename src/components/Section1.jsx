@@ -1,12 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 export default function Section1() {
+  const { t } = useTranslation();
   return (
     <div className="section-container">
       <div className="section-left">
-        <div className="title">Enjoy on your TV.</div>
-        <div className="desc">
-          Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
-          players, and more.
-        </div>
+        <div className="title">{t("Enjoy")}</div>
+        <div className="desc">{t("Section1_desc")}</div>
       </div>
       <div className="section-right">
         <img src="images/tv.png" alt="" />

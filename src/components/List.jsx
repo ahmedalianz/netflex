@@ -7,7 +7,7 @@ export default function List({ title, list }) {
   return (
     <div className="list">
       <div className="list-container">
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         <div>
           <Swiper
             navigation

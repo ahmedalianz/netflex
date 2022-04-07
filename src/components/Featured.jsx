@@ -3,9 +3,13 @@ import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
+import cookie from "js-cookie";
+import { useTranslation } from "react-i18next";
 
 export default function Featured() {
   const [genres, setGenres] = useState([]);
+  const currentLanguageCode = cookie.get("i18next") || "en";
+  const { t } = useTranslation();
   useEffect(() => {
     async function getGenres() {
       let res = await axios(
@@ -17,11 +21,11 @@ export default function Featured() {
   }, []);
   return (
     <div className="featured">
-      <div className="category">
-        <span>Movies</span>
+      <div className={`category ${currentLanguageCode === "ar" && "arabic"}`}>
+        <span>{t("Movies")}</span>
         <select name="genre" id="genre">
           <option disabled selected>
-            Genre
+            {t("Genre")}
           </option>
           {genres.map((genre) => (
             <option key={genre.id} value={genre.name}>

@@ -1,18 +1,18 @@
 import { ArrowForwardIos } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 export default function Subscribe() {
+  const { t } = useTranslation();
   return (
     <div className="subscribe">
-      <div className="title">
-        Ready to watch? Enter your email to create or restart your membership.
-      </div>
+      <div className="title">{t("Ready")}</div>
       <div className="sub-field">
         <div className="floating-input">
           <input id="email" type="email" />
-          <label htmlFor="email">Email Adress</label>
+          <label htmlFor="email">{t("Email")}</label>
         </div>
         <button>
-          Get Started <ArrowForwardIos />
+          {t("Get_Started")} <ArrowForwardIos />
         </button>
       </div>
     </div>
