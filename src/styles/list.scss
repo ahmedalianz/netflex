@@ -2,11 +2,9 @@
   padding: 2rem 0;
 
   .swiper {
-    overflow: visible;
-    overflow-x: clip;
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none;
+    .slick-list {
+      overflow: visible;
+      overflow-x: clip;
     }
   }
   .list {
@@ -18,6 +16,7 @@
     }
     .mySlide {
       // list item style
+      margin: 0 0.5rem;
       .list-item {
         img {
           width: 100%;
