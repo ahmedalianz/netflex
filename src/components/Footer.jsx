@@ -1,3 +1,5 @@
+import { ArrowDropDown, Language } from "@mui/icons-material";
+
 export default function Footer() {
   return (
     <div className="footer-container">
@@ -28,13 +30,15 @@ export default function Footer() {
             <span className="item">Contact Us</span>
           </div>
         </div>
-        <div>
+        <div className="select">
+          <Language className="icon lang" />
+          <ArrowDropDown className="icon arrow" />
           <select name="language" id="">
             <option value="en">English</option>
             <option value="ar">العربيه</option>
           </select>
 
-          <div style={{ marginTop: "1 rem" }}>Netflix Egypt</div>
+          <div style={{ marginTop: "1rem" }}>Netflix Egypt</div>
         </div>
       </div>
     </div>

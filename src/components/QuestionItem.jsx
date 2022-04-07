@@ -18,9 +18,9 @@ export default function QuestionItem({ question }) {
             ? {
                 height: "auto",
                 overflow: "visible",
-                padding: "0.8em 2.2em 0.8em 1.2em",
+                padding: "1.5rem 2rem",
               }
-            : { height: "0", overflow: "hidden", padding: "0 2.2em 0 1.2em" }
+            : { height: "0", overflow: "hidden", padding: "0 2rem" }
         }
       >
         <span>{question.answer}</span>

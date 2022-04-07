@@ -3,19 +3,50 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 912px) {
+    flex-direction: column;
+    &.sec-2 {
+      flex-direction: column-reverse;
+    }
+  }
   .section-left {
     width: 50%;
+    @media (max-width: 912px) {
+      width: 90%;
+      margin: 1rem auto;
+      text-align: center;
+    }
+    @media (max-width: 912px) {
+      width: 100%;
+    }
     .title {
       font-size: 3rem;
       font-weight: bold;
+      @media (max-width: 912px) {
+        font-size: 2.5rem;
+      }
+      @media (max-width: 540px) {
+        font-size: 1.8rem;
+      }
     }
     .desc {
       font-size: 2rem;
+      @media (max-width: 912px) {
+        font-size: 1.5rem;
+      }
+      @media (max-width: 540px) {
+        font-size: 1.2rem;
+      }
     }
   }
   .section-right {
     width: 40%;
     position: relative;
+    @media (max-width: 912px) {
+      width: 90%;
+      margin: 1rem auto;
+      text-align: center;
+    }
     img {
       width: 100%;
       position: relative;
@@ -26,10 +57,17 @@
       top: 0.2rem;
       position: absolute;
       width: 73%;
+      @media (max-width: 415px) {
+        left: 3.2rem;
+      }
       &.small {
         width: 60%;
         top: 2.5rem;
         left: 6rem;
+        @media (max-width: 415px) {
+          top: 2rem;
+          left: 3.5rem;
+        }
       }
     }
   }

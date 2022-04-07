@@ -1,7 +1,7 @@
 export default function Section2({ image, title, desc }) {
   return (
-    <div className="section-container">
-      <div className="section-right">
+    <div className="section-container sec-2">
+      <div className="section-right ">
         <img src={image} alt=""></img>
       </div>
       <div className="section-left">

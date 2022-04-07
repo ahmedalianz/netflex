@@ -1,19 +1,29 @@
 .frequent-container {
   padding: 3rem 3rem;
   .questions {
-    margin: 1.25em auto;
     max-width: 815px;
     width: 60%;
-    margin: 2em auto;
+    margin: 2rem auto;
+    @media (max-width: 912px) {
+      width: 90%;
+    }
+    @media (max-width: 540px) {
+      width: 100%;
+    }
     .questions-item {
       margin-bottom: 8px;
       font-size: 1.8rem;
+      @media (max-width: 540px) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: 375px) {
+        font-size: 1.2rem;
+      }
       .question {
         font-weight: 500;
-        padding: 0.8em 2.2em 0.8em 1.2em;
+        padding: 1.5rem 2rem;
         margin-bottom: 3px;
         position: relative;
-        width: 100%;
         border: 0;
         background: #303030;
         display: flex;
@@ -29,7 +39,6 @@
       }
       .answer {
         background: #303030;
-        width: 100%;
         transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
       }
     }
@@ -38,6 +47,9 @@
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
+    @media (max-width: 540px) {
+      font-size: 2rem;
+    }
   }
   .subscribe {
     .title {
@@ -49,6 +61,10 @@
       display: flex;
       margin: 1.5rem 0;
       justify-content: center;
+      @media (max-width: 912px) {
+        flex-direction: column;
+        align-items: center;
+      }
       .floating-input {
         position: relative;
         input {
@@ -64,6 +80,12 @@
               top: 0;
               font-size: 1rem;
             }
+          }
+          @media (max-width: 415px) {
+            width: 350px;
+          }
+          @media (max-width: 360px) {
+            width: 300px;
           }
         }
         label {
@@ -89,6 +111,11 @@
         background-color: #e00812;
         &:hover {
           background-color: #f40612;
+        }
+        @media (max-width: 912px) {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+          padding: 0.8rem 1.6rem;
         }
       }
     }
