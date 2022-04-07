@@ -35,7 +35,7 @@ export default function Footer({ currentLanguageCode }) {
             <span className="item">{t("Contact_Us")}</span>
           </div>
         </div>
-        <div className="select">
+        <span className="select">
           <Language className="icon lang" />
           <ArrowDropDown className="icon arrow" />
           <select
@@ -52,7 +52,7 @@ export default function Footer({ currentLanguageCode }) {
           </select>
 
           <div style={{ marginTop: "1rem" }}>Netflix {t("Egypt")}</div>
-        </div>
+        </span>
       </div>
     </div>
   );

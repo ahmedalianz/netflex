@@ -35,7 +35,7 @@ export default function Featured() {
         </select>
       </div>
       <img src="/images/home.jpg" alt="" />
-      <div className="info">
+      <div className={`info ${currentLanguageCode === "ar" && "arabic"}`}>
         <img src="/images/spi.png" alt="" />
         <span className="desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
